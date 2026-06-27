@@ -4,3 +4,11 @@ langchain_community
 numpy
 langgraph
 python-dotenv
+fastapi
+streamlit
+uvicorn
+pydantic
+httpx
+requests
+langchain_google_community
+langchain_tavily
