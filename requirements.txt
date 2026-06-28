@@ -12,3 +12,5 @@ httpx
 requests
 langchain_google_community
 langchain_tavily
+
+-e .
