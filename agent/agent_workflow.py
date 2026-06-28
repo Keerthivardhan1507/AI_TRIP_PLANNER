@@ -14,12 +14,17 @@ class GraphBuilder:
         self.llm = self.model_loader.load_llm()
         
         self.tools = []
+        
+        
+        
+        self.system_prompt = SYSTEM_PROMPT
     
     def agent_function(self,state:MessagesState):
         """Main Agent Function"""
         user_questions = state["messages"]
-        
-        pass
+        input_question = [self.system_prompt]+user_questions
+        response = self.llm_with_tools.invoke(input_question)
+        return {"messages":[response]}
     
     
     
@@ -35,4 +40,4 @@ class GraphBuilder:
         return self.graph
     
     def __call__(self):
-        pass
+        return self.build_graph()
