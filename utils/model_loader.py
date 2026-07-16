@@ -13,7 +13,7 @@ class configloader:
         self.config = load_config()
         
         
-    def get_item(self,key):
+    def __getitem__(self,key):
         return self.config[key]
     
     
@@ -26,7 +26,7 @@ class ModelLoader(BaseModel):
         self.config = configloader()
         
     class Config:
-        artibitary_typrs_allowed = True
+        arbitrary_types_allowed = True
         
     def load_llm(self):
         """Load the llm model

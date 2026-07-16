@@ -28,11 +28,11 @@ async def qyery_travel_agent(query:QyeryRequest):
         
         png_graph = react_app.get_graph().draw_mermaid_png()
         
-        with open(png_graph,"wb") as f:
+        with open("png_graph.png","wb") as f:
             f.write(png_graph)
             
         print(f"graph saved as 'png_graph.png' in {os.getcwd()}")
-        messages = {"messages":[query.question]}
+        messages = {"messages":[query.query]}
         output = react_app.invoke(messages)
         
         if isinstance (output,dict) and "messages" in output:

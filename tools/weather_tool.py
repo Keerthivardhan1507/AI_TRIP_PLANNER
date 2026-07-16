@@ -32,7 +32,7 @@ class WeatherInformationTool:
                 
                 for i in range(len(forecast_data['list'])):
                     item = forecast_data['list'][i]
-                    date = item['dx_txt'].split(' ')[0]
+                    date = item['dt_txt'].split(' ')[0]
                     temp = item['main']['temp']
                     desc = item['weather'][0]['description']
                     forecast_summary.append(f"{date}:{temp},degree celcious,{desc}")

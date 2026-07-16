@@ -2,7 +2,7 @@ import os
 from utils.place_info_search import GooglePlaceSearchTool,TavilyPlaceSearchTool
 from dotenv import load_dotenv
 load_dotenv()
-from typing import List,dict
+from typing import List
 from langchain.tools import tool
 
 class PlaceSearchTool:
